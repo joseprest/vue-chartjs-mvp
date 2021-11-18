@@ -2,17 +2,17 @@
   <div>
     <span>Chart</span>
     <div>
-      <line-chart :chart-data="datacollection"></line-chart>
+      <MixedChart />
     </div>
   </div>
 </template>
 
 <script>
-import LineChart from './../../components/Charts/LineChart.js';
+import MixedChart from '../components/MixedChart.vue';
 
 export default {
   name: 'Home',
-  components: { LineChart },
+  components: { MixedChart },
   data() {
     return {
       datacollection: {
