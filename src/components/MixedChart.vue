@@ -10,7 +10,7 @@
 
 <script>
 import ScatterChart from './charts/ScatterChart';
-import { verticalLinePlugin } from './charts/VerticalLinePlugin';
+import { VerticalLinePlugin } from './charts/VerticalLinePlugin';
 
 export default {
   components: {
@@ -133,7 +133,7 @@ export default {
           events: ['mousemove'],
         },
       },
-      plugin: [verticalLinePlugin],
+      plugin: [VerticalLinePlugin],
       tooltipOption: {},
     };
   },

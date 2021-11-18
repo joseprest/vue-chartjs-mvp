@@ -1,4 +1,4 @@
-export const verticalLinePlugin = {
+export const VerticalLinePlugin = {
   afterEvent(chartInstance, args) {
     // const event = args.event;
     console.log(args.chart.active);
