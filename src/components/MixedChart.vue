@@ -125,8 +125,13 @@ export default {
           },
         },
         aspectRatio: false,
-        tooltips: {},
-        events: ['mousemove', 'mouseout', 'click', 'touchstart', 'touchmove'],
+        events: ['mousemove'],
+        interaction: {
+          intersect: false,
+        },
+        tooltip: {
+          events: ['mousemove'],
+        },
       },
       plugin: [verticalLinePlugin],
       tooltipOption: {},
@@ -136,4 +141,9 @@ export default {
   name: 'MixedChart',
 };
 </script>
-<style scoped></style>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+.local-chart {
+}
+</style>

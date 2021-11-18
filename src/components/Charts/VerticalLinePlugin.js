@@ -1,8 +1,16 @@
 export const verticalLinePlugin = {
-  afterEvent(chartInstance, args, pluginOptions) {
-    const events = args.events;
-    console.log(args, pluginOptions, events);
-
+  afterEvent(chartInstance, args) {
+    // const event = args.event;
+    console.log(args.chart.active);
+    if (args.chart.active.length > 0) {
+      const { _datasetIndex: datasetIndex, _index: index } =
+        args.chart.active[0];
+      if (datasetIndex == 1) {
+        this.drawLine(chartInstance, datasetIndex, index);
+      }
+    }
+  },
+  drawLine(chartInstance, datasetIndex, index) {
     const {
       config: { data },
       ctx,
@@ -10,7 +18,7 @@ export const verticalLinePlugin = {
       scales,
     } = chartInstance;
 
-    const point = data.datasets[0].data[0];
+    const point = data.datasets[datasetIndex].data[index];
 
     // draw line
 
