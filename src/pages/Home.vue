@@ -2,62 +2,55 @@
   <div>
     <span>Chart</span>
     <div>
-      <MixedChart />
+      <highcharts v-bind:options="chart2" />
     </div>
   </div>
 </template>
 
 <script>
-import MixedChart from '../components/MixedChart.vue';
-
+import Chart from './../components/HighChartDemo.vue';
 export default {
   name: 'Home',
-  components: { MixedChart },
+  components: {
+    highcharts: Chart,
+  },
   data() {
     return {
-      datacollection: {
-        labels: [
-          'week 1',
-          'week 2',
-          'week 3',
-          'week 4',
-          'week 5',
-          'week 6',
-          'week 7',
-          'week 8',
-          'week 9',
-          'week 10',
-        ],
-        datasets: [
-          {
-            data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
-            label: 'Africa',
-            borderColor: '#3e95cd',
-            fill: false,
+      chart2: {
+        yAxis: {
+          title: {
+            text: 'mesure 2',
           },
+        },
+        series: [
           {
-            data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
-            label: 'Asia',
-            borderColor: '#8e5ea2',
-            fill: false,
-          },
-          {
-            data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
-            label: 'Europe',
-            borderColor: '#3cba9f',
-            fill: false,
-          },
-          {
-            data: [40, 20, 10, 16, 24, 38, 74, 167, 508, 784],
-            label: 'Latin America',
-            borderColor: '#e8c3b9',
-            fill: false,
-          },
-          {
-            data: [6, 3, 2, 2, 7, 26, 82, 172, 312, 433],
-            label: 'North America',
-            borderColor: '#c45850',
-            fill: false,
+            data: [
+              [1356998400000, 151],
+              [1359676800000, 52],
+              [1362096000000, 10],
+              [1364774400000, 56],
+              [1367366400000, 45],
+              [1370044800000, 11],
+              [1372636800000, 52],
+              [1375315200000, 54],
+              [1377993600000, 32],
+              [1380585600000, 76],
+              [1383264000000, 87],
+              [1385856000000, 54],
+              [1388534400000, 65],
+              [1391212800000, 22],
+              [1393632000000, 71],
+              [1396310400000, 25],
+              [1398902400000, 65],
+              [1401580800000, 42],
+              [1404172800000, 84],
+              [1406851200000, 46],
+              [1412121600000, 10],
+              [1414800000000, 2],
+              [1417392000000, 90],
+              [1420070400000, 63],
+              [1422748800000, 74],
+            ],
           },
         ],
       },

@@ -10,6 +10,8 @@
   "dependencies": {
     "chart.js": "^2.9.4",
     "core-js": "^3.6.5",
+    "highcharts": "^9.3.2",
+    "highcharts-vue": "^1.4.0",
     "sass": "^1.43.4",
     "sass-loader": "^10",
     "vue": "^2.6.11",
