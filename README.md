@@ -1,4 +1,8 @@
+
 # chart-mvp
+
+## Live
+https://vuechartjs-mvp.netlify.app/
 
 ## Project setup
 ```
